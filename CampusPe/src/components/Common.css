@@ -1,0 +1,177 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 11px 22px;
+  border-radius: 13px;
+  font: 800 13px 'DM Sans',sans-serif;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.button svg {
+  transition: transform .25s;
+}
+
+.button:hover svg {
+  transform: translateX(4px);
+}
+
+.button:active {
+  transform: scale(.96);
+}
+
+.button:focus-visible {
+  outline: 3px solid #84ccff;
+  outline-offset: 3px;
+}
+
+.button--primary {
+  color: #fff;
+  background: linear-gradient(110deg,#087cff,#0499ff);
+  box-shadow: 0 7px 18px #087cff33;
+}
+
+.button--primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 11px 25px #087cff55;
+}
+
+.button--outline {
+  color: #087bff;
+  background: #fff;
+  border-color: #acd8ff;
+}
+
+.button--outline:hover {
+  background: #ecf7ff;
+  transform: translateY(-2px);
+}
+
+.button--ghost {
+  background: #f2f8ff;
+  color: #087bff;
+}
+
+.section-tag {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 13px;
+  border: 1px solid #deebff;
+  border-radius: 100px;
+  background: #f6faff;
+  color: #438dff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.tag-dot {
+  height: 7px;
+  width: 7px;
+  border: 2px solid #54acff;
+  border-radius: 50%;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: #06182f9e;
+  backdrop-filter: blur(7px);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  z-index: 200;
+}
+
+.modal-panel {
+  width: min(100%,430px);
+  background: white;
+  padding: 35px;
+  border-radius: 23px;
+  box-shadow: 0 25px 70px #001d4966;
+  position: relative;
+  animation: popIn .3s both;
+}
+
+.modal-panel h2 {
+  font-size: 25px;
+  margin: 0 0 15px;
+}
+
+.modal-close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background: #f0f6ff;
+  border: 0;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.signup-form {
+  display: grid;
+  gap: 11px;
+}
+
+.signup-form p {
+  font-size: 14px;
+  color: #73849a;
+  margin: 0 0 10px;
+}
+
+.signup-form label {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.signup-form input {
+  padding: 13px;
+  border-radius: 11px;
+  border: 1px solid #dce6f4;
+  font: inherit;
+  outline: none;
+}
+
+.signup-form input:focus {
+  border-color: #058aff;
+  box-shadow: 0 0 0 3px #0c8bff19;
+}
+
+.signup-form .button {
+  margin-top: 8px;
+}
+
+.success-note {
+  text-align: center;
+  color: #0a8dff;
+  padding: 10px 0;
+}
+
+.success-note p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

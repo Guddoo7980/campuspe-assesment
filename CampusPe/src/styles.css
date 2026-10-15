@@ -1,0 +1,92 @@
+:root {
+  font-family: 'DM Sans', 'Manrope', Arial, sans-serif;
+  color: #162334;
+  background: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,input {
+  font-family: inherit;
+}
+
+a,button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a: focus-visible,button:focus-visible {
+  outline: 3px solid #7cc8ff;
+  outline-offset: 3px;
+}
+
+.container {
+  width: min(1150px,calc(100% - 64px));
+  margin: auto;
+}
+
+::selection {
+  background: #c2e4ff;
+  color: #075db3;
+}
+
+@media(max-width:600px) {
+  .container {
+    width: calc(100% - 34px);
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    animation-duration: .01ms!important;
+    animation-iteration-count: 1!important;
+    scroll-behavior: auto!important;
+    transition-duration: .01ms!important;
+  }
+}
+
+
+/* Keep smaller labels legible on high-density and mobile screens. */
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+p, li, small, .phone-display, .partner-logo {
+  filter: none;
+  text-shadow: none;
+}
+
+button, a {
+  transition: color .2s ease, background-color .2s ease,
+    box-shadow .2s ease, transform .2s ease;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .7s ease, transform .7s cubic-bezier(.2,.75,.25,1);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll { opacity: 1; transform: none; }
+}
